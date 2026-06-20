@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        nav { background-color: lightblue; padding: 15px; }
+        nav a { margin-right: 15px; text-decoration: none; }
+    </style>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'main' %}">HOME</a>
+        <a href="{% url 'contact' %}">CONTACT US</a>
+        <a href="{% url 'about' %}">ABOUT US</a>
+    </nav>
+
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+
+    <footer>
+        <hr>
+        &copy; Designed and Developed by CSD Department FETC, SUK Kalburgi.
+    </footer>
+</body>
+</html>

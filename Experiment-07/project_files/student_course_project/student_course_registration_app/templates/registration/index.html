@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Courses</h1>
+    <ul class="list-group mt-3">
+        {% for course in courses %}
+            <li class="list-group-item">
+                <a href="{% url 'student_list' course.id %}">{{ course.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a class="btn btn-primary mt-3" href="{% url 'register_student' %}">Register Student</a>
+    <a class="btn btn-secondary mt-3" href="{% url 'register_course' %}">Register Course</a>
+</div>
+{% endblock %}
